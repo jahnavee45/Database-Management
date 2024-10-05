@@ -2,7 +2,6 @@ package p1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
@@ -115,10 +114,11 @@ public class Main {
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
 			int option = scn.nextInt();
+			scn.close();
 			return option;
 		}
+		scn.close();
 		return 6;
-
 	}
 
 	// CASE 4
@@ -180,8 +180,10 @@ public class Main {
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
 			int option1 = scn.nextInt();
+			scn.close();
 			return option1;
 		}
+		scn.close();
 		return 6;
 
 	}
@@ -213,8 +215,10 @@ public class Main {
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
 			int option = scn.nextInt();
+			scn.close();
 			return option;
 		}
+		scn.close();
 		return 6;
 
 	}
@@ -246,8 +250,10 @@ public class Main {
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
 			int option = scn.nextInt();
+			scn.close();
 			return option;
 		}
+		scn.close();
 		return 6;
 
 	}
@@ -276,8 +282,10 @@ public class Main {
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
 			int option = scn.nextInt();
+			scn.close();
 			return option;
 		}
+		scn.close();
 		return 6;
 
 	}
