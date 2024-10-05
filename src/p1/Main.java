@@ -11,7 +11,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		// creating variable names same as given in database table column names
+		// creating variable names same as in database table column names
 		String name;
 		String email;
 		String mobile;
