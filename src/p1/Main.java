@@ -85,7 +85,7 @@ public class Main {
 
 		try {
 			// connect to database
-			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "usename", "password");
+			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "user_name", "password");
 
 			// execute SQL query
 			Statement stm = con.createStatement();
@@ -133,7 +133,7 @@ public class Main {
 			String mobile;
 
 			// connect to database
-			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "usename", "password");
+			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "user_name", "password");
 
 			// execute SQL query
 			Statement stm = con.createStatement();
@@ -193,7 +193,7 @@ public class Main {
 
 		try {
 			// connect to database
-			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "usename", "password");
+			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "user_name", "password");
 
 			// execute SQL query
 			Statement stm = con.createStatement();
@@ -228,7 +228,7 @@ public class Main {
 
 		try {
 			// connect to database
-			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "usename", "password");
+			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "user_name", "password");
 
 			// execute SQL query
 			Statement stm = con.createStatement();
@@ -263,7 +263,7 @@ public class Main {
 
 		try {
 			// connect to database
-			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "usename", "password");
+			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database_name", "user_name", "password");
 			System.out.println("\n" + con);
 			System.out.println("SQL connection successful!");
 
