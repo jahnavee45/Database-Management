@@ -20,9 +20,9 @@ public class Main {
 				+ "\n3. Delete a member" + "\n4. Update member details" + "\n5. Retrieve the table data");
 		System.out.print("Choose an option: ");
 
-		Scanner scn = new Scanner(System.in);
-		int option = scn.nextInt();
-		scn.nextLine();
+		Scanner scan = new Scanner(System.in);
+		int option = scan.nextInt();
+		scan.nextLine();
 
 		while (option != 6) {
 			switch (option) {
@@ -36,11 +36,11 @@ public class Main {
 			case 2: {
 
 				System.out.print("\nEnter name: ");
-				name = scn.nextLine();
+				name = scan.nextLine();
 				System.out.print("Enter email id: ");
-				email = scn.nextLine();
+				email = scan.nextLine();
 				System.out.print("Enter mobile: ");
-				mobile = scn.nextLine();
+				mobile = scan.nextLine();
 
 				// calling method to perform insert operation
 				option = insertQuery(name, email, mobile);
@@ -49,7 +49,7 @@ public class Main {
 			case 3: {
 
 				System.out.println("\nEnter email id: ");
-				email = scn.nextLine();
+				email = scan.nextLine();
 
 				// calling method to perform delete operation
 				option = deleteQuery(email);
@@ -60,8 +60,8 @@ public class Main {
 				System.out
 						.println("\nWhat do you want to update? " + "\n1. Name " + "\n2. Email" + "\n3. Mobile number");
 				System.out.print("Choose an option: ");
-				int option2 = scn.nextInt();
-				scn.nextLine();
+				int option2 = scan.nextInt();
+				scan.nextLine();
 
 				option = updateQuery(option2);
 				break;
@@ -76,7 +76,7 @@ public class Main {
 		}
 
 		System.out.print("\n-----------SESSION TERMINATED----------");
-		scn.close();
+		scan.close();
 
 	}
 
@@ -107,24 +107,24 @@ public class Main {
 		}
 
 		// check if user wants to continue or not
-		Scanner scn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.println("\nDo you want to continue? yes/no");
-		String flag = scn.nextLine();
+		String flag = scan.nextLine();
 
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
-			int option = scn.nextInt();
-			scn.close();
+			int option = scan.nextInt();
+			scan.close();
 			return option;
 		}
-		scn.close();
+		scan.close();
 		return 6;
 	}
 
 	// CASE 4
 	private static int updateQuery(int option) {
 
-		Scanner scn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
 		try {
 
@@ -141,25 +141,25 @@ public class Main {
 			switch (option) {
 			case 1: {
 				System.out.println("Enter email id of the member: ");
-				email = scn.nextLine();
+				email = scan.nextLine();
 				System.out.println("Enter modified name: ");
-				name = scn.nextLine();
+				name = scan.nextLine();
 				stm.executeUpdate("Update registration set name = '" + name + "' where email = '" + email + "'");
 				break;
 			}
 			case 2: {
 				System.out.println("Enter name of the member: ");
-				name = scn.nextLine();
+				name = scan.nextLine();
 				System.out.println("Enter modified email id: ");
-				email = scn.nextLine();
+				email = scan.nextLine();
 				stm.executeUpdate("Update registration set email = '" + email + "' where name = '" + name + "'");
 				break;
 			}
 			case 3: {
 				System.out.println("Enter email id: ");
-				email = scn.nextLine();
+				email = scan.nextLine();
 				System.out.println("Enter new mobile number: ");
-				mobile = scn.nextLine();
+				mobile = scan.nextLine();
 				stm.executeUpdate("Update registration set mobile = '" + mobile + "' where email = '" + email + "'");
 				break;
 			}
@@ -175,15 +175,15 @@ public class Main {
 
 		// check if user wants to continue or not
 		System.out.println("\nDo you want to continue? yes/no");
-		String flag = scn.nextLine();
+		String flag = scan.nextLine();
 
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
-			int option1 = scn.nextInt();
-			scn.close();
+			int option1 = scan.nextInt();
+			scan.close();
 			return option1;
 		}
-		scn.close();
+		scan.close();
 		return 6;
 
 	}
@@ -208,17 +208,17 @@ public class Main {
 		}
 
 		// check if user wants to continue or not
-		Scanner scn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.println("\nDo you want to continue? yes/no");
-		String flag = scn.nextLine();
+		String flag = scan.nextLine();
 
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
-			int option = scn.nextInt();
-			scn.close();
+			int option = scan.nextInt();
+			scan.close();
 			return option;
 		}
-		scn.close();
+		scan.close();
 		return 6;
 
 	}
@@ -243,17 +243,17 @@ public class Main {
 		}
 
 		// check if user wants to continue or not
-		Scanner scn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.println("\nDo you want to continue? yes/no");
-		String flag = scn.nextLine();
+		String flag = scan.nextLine();
 
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
-			int option = scn.nextInt();
-			scn.close();
+			int option = scan.nextInt();
+			scan.close();
 			return option;
 		}
-		scn.close();
+		scan.close();
 		return 6;
 
 	}
@@ -275,17 +275,17 @@ public class Main {
 		}
 
 		// check if user wants to continue or not
-		Scanner scn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.println("\nDo you want to continue? yes/no");
-		String flag = scn.nextLine();
+		String flag = scan.nextLine();
 
 		if (flag.equals("yes")) {
 			System.out.print("Choose an option again: ");
-			int option = scn.nextInt();
-			scn.close();
+			int option = scan.nextInt();
+			scan.close();
 			return option;
 		}
-		scn.close();
+		scan.close();
 		return 6;
 
 	}
